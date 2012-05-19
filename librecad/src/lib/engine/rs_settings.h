@@ -84,7 +84,13 @@ public:
 private:
 
     RS_Settings();
+#ifdef WIN32
+    RS_Settings(RS_Settings&);
+	RS_Settings operator = (RS_Settings&);
+#else
     RS_Settings(RS_Settings&) = delete;
+	RS_Settings operator = (RS_Settings&) = delete;
+#endif
         QVariant readEntryCache(const QString& key);
         void addToCache(const QString& key, const QVariant& value);
 

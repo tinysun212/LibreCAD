@@ -3,6 +3,8 @@
  */
 
 #ifdef EMU_C99
+#ifndef EMU_C99_H
+#define EMU_C99_H
 #include <assert.h>
 
 long int lrint(double x);
@@ -32,5 +34,7 @@ double remainder(double x, double y);
 int __isinfd(double);
 int __isnand(double);
 int __isnormald(double);
+
+#endif
 
 #endif

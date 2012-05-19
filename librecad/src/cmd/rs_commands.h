@@ -74,8 +74,13 @@ protected:
 
 private:
     RS_Commands() ;
+#ifdef WIN32
+    RS_Commands(RS_Commands& );
+    RS_Commands& operator = ( RS_Commands& );
+#else
     RS_Commands(RS_Commands& ) = delete;
     RS_Commands& operator = ( RS_Commands& ) = delete;
+#endif
 
     QMultiHash<QString, RS2::ActionType> mainCommands;
     QMultiHash<QString, RS2::ActionType> shortCommands;

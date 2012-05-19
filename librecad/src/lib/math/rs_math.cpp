@@ -681,50 +681,50 @@ bool RS_Math::linearSolver(const QVector<QVector<double> >& mt, QVector<double>&
     }
     sn.resize(mSize);//to hold the solution
     //#ifdef	HAS_BOOST
-#if false
-    boost::numeric::ublas::matrix<double> bm (mSize, mSize);
-    boost::numeric::ublas::vector<double> bs(mSize);
-
-    for(int i=0;i<mSize;i++) {
-        for(int j=0;j<mSize;j++) {
-            bm(i,j)=mt[i][j];
-        }
-        bs(i)=mt[i][mSize];
-    }
-    //solve the linear equation set by LU decomposition in boost ublas
-
-    if ( boost::numeric::ublas::lu_factorize<boost::numeric::ublas::matrix<double> >(bm) ) {
-        std::cout<<__FILE__<<" : "<<__FUNCTION__<<" : line "<<__LINE__<<std::endl;
-        std::cout<<" linear solver failed"<<std::endl;
-        //        RS_DEBUG->print(RS_Debug::D_WARNING, "linear solver failed");
-        return false;
-    }
-
-    boost::numeric::ublas:: triangular_matrix<double, boost::numeric::ublas::unit_lower>
-            lm = boost::numeric::ublas::triangular_adaptor< boost::numeric::ublas::matrix<double>,  boost::numeric::ublas::unit_lower>(bm);
-    boost::numeric::ublas:: triangular_matrix<double,  boost::numeric::ublas::upper>
-            um =  boost::numeric::ublas::triangular_adaptor< boost::numeric::ublas::matrix<double>,  boost::numeric::ublas::upper>(bm);
-    ;
-    boost::numeric::ublas::inplace_solve(lm,bs, boost::numeric::ublas::lower_tag());
-    boost::numeric::ublas::inplace_solve(um,bs, boost::numeric::ublas::upper_tag());
-    for(int i=0;i<mSize;i++){
-        sn[i]=bs(i);
-    }
-    //    std::cout<<"dn="<<dn<<std::endl;
-    //    data.center.set(-0.5*dn(1)/dn(0),-0.5*dn(3)/dn(2)); // center
-    //    double d(1.+0.25*(dn(1)*dn(1)/dn(0)+dn(3)*dn(3)/dn(2)));
-    //    if(fabs(dn(0))<RS_TOLERANCE*RS_TOLERANCE
-    //            ||fabs(dn(2))<RS_TOLERANCE*RS_TOLERANCE
-    //            ||d/dn(0)<RS_TOLERANCE*RS_TOLERANCE
-    //            ||d/dn(2)<RS_TOLERANCE*RS_TOLERANCE
-    //            ) {
-    //        //ellipse not defined
-    //        return false;
-    //    }
-    //    d=sqrt(d/dn(0));
-    //    data.majorP.set(d,0.);
-    //    data.ratio=sqrt(dn(0)/dn(2));
-#else
+//#if false
+//    boost::numeric::ublas::matrix<double> bm (mSize, mSize);
+//    boost::numeric::ublas::vector<double> bs(mSize);
+//
+//    for(int i=0;i<mSize;i++) {
+//        for(int j=0;j<mSize;j++) {
+//            bm(i,j)=mt[i][j];
+//        }
+//        bs(i)=mt[i][mSize];
+//    }
+//    //solve the linear equation set by LU decomposition in boost ublas
+//
+//    if ( boost::numeric::ublas::lu_factorize<boost::numeric::ublas::matrix<double> >(bm) ) {
+//        std::cout<<__FILE__<<" : "<<__FUNCTION__<<" : line "<<__LINE__<<std::endl;
+//        std::cout<<" linear solver failed"<<std::endl;
+//        //        RS_DEBUG->print(RS_Debug::D_WARNING, "linear solver failed");
+//        return false;
+//    }
+//
+//    boost::numeric::ublas:: triangular_matrix<double, boost::numeric::ublas::unit_lower>
+//            lm = boost::numeric::ublas::triangular_adaptor< boost::numeric::ublas::matrix<double>,  boost::numeric::ublas::unit_lower>(bm);
+//    boost::numeric::ublas:: triangular_matrix<double,  boost::numeric::ublas::upper>
+//            um =  boost::numeric::ublas::triangular_adaptor< boost::numeric::ublas::matrix<double>,  boost::numeric::ublas::upper>(bm);
+//    ;
+//    boost::numeric::ublas::inplace_solve(lm,bs, boost::numeric::ublas::lower_tag());
+//    boost::numeric::ublas::inplace_solve(um,bs, boost::numeric::ublas::upper_tag());
+//    for(int i=0;i<mSize;i++){
+//        sn[i]=bs(i);
+//    }
+//    //    std::cout<<"dn="<<dn<<std::endl;
+//    //    data.center.set(-0.5*dn(1)/dn(0),-0.5*dn(3)/dn(2)); // center
+//    //    double d(1.+0.25*(dn(1)*dn(1)/dn(0)+dn(3)*dn(3)/dn(2)));
+//    //    if(fabs(dn(0))<RS_TOLERANCE*RS_TOLERANCE
+//    //            ||fabs(dn(2))<RS_TOLERANCE*RS_TOLERANCE
+//    //            ||d/dn(0)<RS_TOLERANCE*RS_TOLERANCE
+//    //            ||d/dn(2)<RS_TOLERANCE*RS_TOLERANCE
+//    //            ) {
+//    //        //ellipse not defined
+//    //        return false;
+//    //    }
+//    //    d=sqrt(d/dn(0));
+//    //    data.majorP.set(d,0.);
+//    //    data.ratio=sqrt(dn(0)/dn(2));
+//#else
     // solve the linear equation by Gauss-Jordan elimination
     QVector<QVector<double> > mt0(mt); //copy the matrix;
     for(int i=0;i<mSize;i++){
@@ -767,7 +767,7 @@ bool RS_Math::linearSolver(const QVector<QVector<double> >& mt, QVector<double>&
     for(int i=0;i<mSize;i++) {
         sn[i]=mt0[i][mSize];
     }
-#endif
+//#endif
 
     return true;
 }

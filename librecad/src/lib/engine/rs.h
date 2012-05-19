@@ -40,6 +40,13 @@
 #define RS_MAXDOUBLE 1.0E+10
 #define RS_MINDOUBLE -1.0E+10
 
+// Windows MS VC doesn't do C99 math
+#ifdef WIN32
+#ifndef EMU_C99
+#define EMU_C99
+#endif
+#endif
+
 
 /**
  * Class namespace for various enums along with some simple

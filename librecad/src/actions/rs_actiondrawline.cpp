@@ -32,6 +32,9 @@
 #include "rs_graphicview.h"
 #include "rs_commands.h"
 #include "rs_commandevent.h"
+#ifdef WIN32
+#include "emu_c99.h"
+#endif
 
 
 

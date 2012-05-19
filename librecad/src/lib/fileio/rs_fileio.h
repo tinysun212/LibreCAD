@@ -42,8 +42,13 @@ class RS_FileIO {
 private:
     //singleton
     RS_FileIO();
+#ifdef WIN32
+    RS_FileIO(RS_FileIO&);
+    RS_FileIO& operator = (RS_FileIO&);
+#else
     RS_FileIO(RS_FileIO&) = delete;
     RS_FileIO& operator = (RS_FileIO&) = delete;
+#endif
 	
 public:
     /**
