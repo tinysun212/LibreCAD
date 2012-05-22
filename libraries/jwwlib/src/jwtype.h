@@ -358,7 +358,7 @@ inline istream& operator>> (istream& istr, Double& input)
 }
 #endif
 
-#ifndef _WINDOWS
+//#ifndef _WINDOWS
 inline ofstream& operator<< (ofstream& ofstr, const DOUBLE& output) 
 {
 	ofstr.write((char*)&output, sizeof(DOUBLE));
@@ -370,7 +370,7 @@ inline ifstream& operator>> (ifstream& ifstr, DOUBLE& input)
 	ifstr.read((char*)&input, sizeof(DOUBLE));
     return ifstr;
 }
-#endif
+//#endif
 
 inline ofstream& operator<< (ofstream& ofstr, const DWORD& output) 
 {
