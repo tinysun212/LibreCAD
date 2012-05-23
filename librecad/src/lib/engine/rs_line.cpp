@@ -33,6 +33,8 @@
 #include "rs_graphic.h"
 #include "rs_linetypepattern.h"
 #include "rs_information.h"
+#include "lc_quadratic.h"
+
 
 #ifdef EMU_C99
 #include "emu_c99.h"
@@ -314,6 +316,27 @@ double RS_Line::getDistanceToPoint(const RS_Vector& coord,
 //    return dist;
 }
 
+/** return the equation of the entity
+for quadratic,
+
+return a vector contains:
+m0 x^2 + m1 xy + m2 y^2 + m3 x + m4 y + m5 =0
+
+for linear:
+m0 x + m1 y + m2 =0
+**/
+LC_Quadratic RS_Line::getQuadratic() const
+{
+    std::vector<double> ce(3,0.);
+    auto&& dvp=data.endpoint - data.startpoint;
+    RS_Vector normal(-dvp.y,dvp.x);
+    ce[0]=normal.x;
+    ce[1]=normal.y;
+    ce[2]=- normal.dotP(data.endpoint);
+    return LC_Quadratic(ce);
+}
+
+
 RS_Vector  RS_Line::getTangentDirection(const RS_Vector& /*point*/)const{
         return getEndpoint() - getStartpoint();
 }
@@ -543,11 +566,34 @@ void RS_Line::draw(RS_Painter* painter, RS_GraphicView* view, double& patternOff
     if (painter==NULL || view==NULL) {
         return;
     }
-    //visible in grahic view
-    if(isVisibleInWindow(view)==false) return;
-    RS_Vector pStart(view->toGui(getStartpoint()));
-    RS_Vector pEnd(view->toGui(getEndpoint()));
 
+    //only draw the visible portion of line
+    QVector<RS_Vector> endPoints(0);
+        RS_Vector vpMin(view->toGraph(0,view->getHeight()));
+        RS_Vector vpMax(view->toGraph(view->getWidth(),0));
+         QPolygonF visualBox(QRectF(vpMin.x,vpMin.y,vpMax.x-vpMin.x, vpMax.y-vpMin.y));
+    if( getStartpoint().isInWindowOrdered(vpMin, vpMax) ) endPoints<<getStartpoint();
+    if( getEndpoint().isInWindowOrdered(vpMin, vpMax) ) endPoints<<getEndpoint();
+    if(endPoints.size()<2){
+
+         QVector<RS_Vector> vertex;
+         for(unsigned short i=0;i<4;i++){
+             const QPointF& vp(visualBox.at(i));
+             vertex<<RS_Vector(vp.x(),vp.y());
+         }
+         for(unsigned short i=0;i<4;i++){
+             RS_Line line(NULL,RS_LineData(vertex.at(i),vertex.at((i+1)%4)));
+             auto&& vpIts=RS_Information::getIntersection(static_cast<RS_Entity*>(this), &line, true);
+             if( vpIts.size()==0) continue;
+             endPoints<<vpIts.get(0);
+         }
+    }
+    if(endPoints.size()<2) return;
+    if( (endPoints[0] - getStartpoint()).squared() >
+            (endPoints[1] - getStartpoint()).squared() ) std::swap(endPoints[0],endPoints[1]);
+
+    RS_Vector pStart(view->toGui(endPoints.at(0)));
+    RS_Vector pEnd(view->toGui(endPoints.at(1)));
     //    std::cout<<"draw line: "<<pStart<<" to "<<pEnd<<std::endl;
     RS_Vector direction=pEnd-pStart;
     if(isHelpLayer(true) && direction.squared() > RS_TOLERANCE){

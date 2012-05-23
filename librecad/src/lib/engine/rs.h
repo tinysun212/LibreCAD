@@ -142,6 +142,7 @@ public:
         EntityArc,          /**< Arc */
         EntityCircle,       /**< Circle */
         EntityEllipse,      /**< Ellipse */
+        EntityHyperbola,      /**< Hyperbola */
         EntitySolid,        /**< Solid */
         EntityConstructionLine, /**< Construction line */
         EntityText,         /**< Text */
@@ -197,6 +198,11 @@ public:
         ActionEditCopy,
         ActionEditCopyNoSelect,
         ActionEditPaste,
+        ActionOrderNoSelect,
+        ActionOrderBottom,
+        ActionOrderLower,
+        ActionOrderRaise,
+        ActionOrderTop,
 
         ActionViewStatusBar,
         ActionViewLayerList,
@@ -280,13 +286,13 @@ public:
         ActionDrawPolyline,
         ActionDrawText,
 
-                ActionPolylineAdd,
-                ActionPolylineAppend,
-                ActionPolylineDel,
-                ActionPolylineDelBetween,
-                ActionPolylineTrim,
-                ActionPolylineEquidistant,
-                ActionPolylineSegment,
+        ActionPolylineAdd,
+        ActionPolylineAppend,
+        ActionPolylineDel,
+        ActionPolylineDelBetween,
+        ActionPolylineTrim,
+        ActionPolylineEquidistant,
+        ActionPolylineSegment,
 
         ActionDimAligned,
         ActionDimLinear,
