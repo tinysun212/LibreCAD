@@ -66,6 +66,12 @@
     <ClCompile Include="main\helpbrowser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="lib\engine\lc_hyperbola.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\math\lc_quadratic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="main\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -655,6 +661,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="actions\rs_actionoptionsdrawing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="actions\rs_actionorder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="actions\rs_actionparisdebugcreatecontainer.cpp">
@@ -1557,6 +1566,9 @@
     <ClCompile Include="..\..\generated\librecad\moc\moc_rs_actionoptionsdrawing.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\generated\librecad\moc\moc_rs_actionorder.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\generated\librecad\moc\moc_rs_actionparisdebugcreatecontainer.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
@@ -1679,6 +1691,12 @@
     <CustomBuild Include="main\helpbrowser.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
+    <ClInclude Include="lib\engine\lc_hyperbola.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\math\lc_quadratic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="main\main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2280,6 +2298,9 @@
       <Filter>Header Files</Filter>
     </CustomBuild>
     <CustomBuild Include="actions\rs_actionoptionsdrawing.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="actions\rs_actionorder.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
     <CustomBuild Include="actions\rs_actionparisdebugcreatecontainer.h">
@@ -3852,6 +3873,18 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="..\res\ui\mouse.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\res\extui\order_bottom.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\res\extui\order_lower.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\res\extui\order_raise.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\res\extui\order_top.png">
       <Filter>Resource Files</Filter>
     </None>
     <None Include="..\res\extui\points.png">
