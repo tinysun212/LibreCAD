@@ -1751,7 +1751,7 @@ void QC_ApplicationWindow::slotBack() {
 void QC_ApplicationWindow::slotKillAllActions() {
     RS_GraphicView* gv = getGraphicView();
     QC_MDIWindow* m = getMDIWindow();
-    if (gv!=NULL and m!=NULL and m->getDocument()!=NULL) {
+    if (gv!=NULL && m!=NULL && m->getDocument()!=NULL) {
         gv->killAllActions();
         RS_DIALOGFACTORY->requestToolBar(RS2::ToolBarMain);
 

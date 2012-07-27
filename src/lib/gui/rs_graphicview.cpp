@@ -1095,7 +1095,7 @@ void RS_GraphicView::setPenForEntity(RS_Painter *painter,RS_Entity *e)
         w = 0;
     }
 
-#if TRUE
+#if 1
         // - Scale pen width.
         // - Notes: pen width is not scaled on print and print preview.
         //   This is the standard (AutoCAD like) behaviour.

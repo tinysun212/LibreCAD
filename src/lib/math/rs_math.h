@@ -32,9 +32,34 @@
 #define _MT
 #endif
 
-#include <cmath>
+#define _USE_MATH_DEFINES
+#include <math.h>
 #include <complex>
 #include <errno.h>
+
+inline double remainder(double x, double y)
+{
+	if ( y > 0 )
+	{
+		double r = fmod(x, y);
+		if ( r > y/2 )
+			r = r - y;
+		return  r;
+	}
+	else if ( y < 0 )
+	{
+		double r = fmod(x, y);
+		if ( r < y/2 )
+			r = r + y;
+		return  r;
+	}
+	return  fmod(x, y);
+}
+
+inline long int lrint(double x)
+{
+	return (long int) floor(x + 0.5);
+}
 
 // RVT port abs issue on latest compiler?
 #include <cstdlib>
