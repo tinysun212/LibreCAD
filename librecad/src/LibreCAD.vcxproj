@@ -59,7 +59,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtSvg;$(QTDIR)\include;$(QTDIR)\include\QtHelp;.\..\..\libraries\dxflib\src;.\..\..\libraries\libdxfrw\src;.\..\..\libraries\jwwlib\src;.\cmd;.\lib\actions;.\lib\creation;.\lib\debug;.\lib\engine;.\lib\fileio;.\lib\filters;.\lib\gui;.\lib\information;.\lib\math;.\lib\modification;.\lib\scripting;.\actions;.\main;.\plugins;.\ui;.\ui\forms;.\..\res;$(QTDIR)\include\ActiveQt;.\..\..\generated\librecad\moc;.\..\..\generated\librecad\ui;$(QTDIR)\mkspecs\default;.\GeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\muparser\muparser_v2_2_2\include;C:\boost\boost_1_48_0;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtSvg;$(QTDIR)\include;$(QTDIR)\include\QtHelp;.\..\..\libraries\dxflib\src;.\..\..\libraries\libdxfrw\src;.\..\..\libraries\jwwlib\src;.\cmd;.\lib\actions;.\lib\creation;.\lib\debug;.\lib\engine;.\lib\fileio;.\lib\filters;.\lib\gui;.\lib\information;.\lib\math;.\lib\modification;.\lib\scripting;.\actions;.\main;.\plugins;.\ui;.\ui\forms;.\..\res;$(QTDIR)\include\ActiveQt;.\..\..\generated\librecad\moc;.\..\..\generated\librecad\ui;$(QTDIR)\mkspecs\default;.\GeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zm200 -std=c++0x -std=c++0x -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>..\..\generated\librecad\obj\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -76,10 +76,11 @@
       <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
       <UndefinePreprocessorDefinitions>__STRICT_ANSI__;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(QTDIR)\lib\qtmaind.lib;../../generated/lib\dxflib.lib;../../generated/lib\dxfrw.lib;../../generated/lib\jwwlib.lib;muparser32.lib;$(QTDIR)\lib\QtHelpd4.lib;$(QTDIR)\lib\QtSvgd4.lib;$(QTDIR)\lib\QtSqld4.lib;$(QTDIR)\lib\QtGuid4.lib;$(QTDIR)\lib\QtCored4.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(QTDIR)\lib;"/lib -lmuparser32";../../generated/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;/lib -lmuparser32;../../generated/lib;C:\muparser\muparser_v2_2_2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <GenerateDebugInformation>true</GenerateDebugInformation>
