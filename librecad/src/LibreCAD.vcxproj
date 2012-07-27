@@ -101,7 +101,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtSvg;$(QTDIR)\include;$(QTDIR)\include\QtHelp;.\muparser_v2_2_2\include;.\..\..\libraries\dxflib\src;.\..\..\libraries\libdxfrw\src;.\..\..\libraries\jwwlib\src;.\cmd;.\lib\actions;.\lib\creation;.\lib\debug;.\lib\engine;.\lib\fileio;.\lib\filters;.\lib\gui;.\lib\information;.\lib\math;.\lib\modification;.\lib\scripting;.\actions;.\main;.\plugins;.\ui;.\ui\forms;.\..\res;$(QTDIR)\include\ActiveQt;.\..\..\generated\librecad\moc;.\..\..\generated\librecad\ui;$(QTDIR)\mkspecs\default;.\GeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtSvg;$(QTDIR)\include;$(QTDIR)\include\QtHelp;C:\boost\boost_1_48_0;C:\muparser\muparser_v2_2_2\include;.\..\..\libraries\dxflib\src;.\..\..\libraries\libdxfrw\src;.\..\..\libraries\jwwlib\src;.\cmd;.\lib\actions;.\lib\creation;.\lib\debug;.\lib\engine;.\lib\fileio;.\lib\filters;.\lib\gui;.\lib\information;.\lib\math;.\lib\modification;.\lib\scripting;.\actions;.\main;.\plugins;.\ui;.\ui\forms;.\..\res;$(QTDIR)\include\ActiveQt;.\..\..\generated\librecad\moc;.\..\..\generated\librecad\ui;$(QTDIR)\mkspecs\default;.\GeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zm200 -std=c++0x -std=c++0x -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>..\..\generated\librecad\obj\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -121,10 +121,11 @@
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
       <MinimalRebuild>true</MinimalRebuild>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>$(QTDIR)\lib\qtmaind.lib;dxflib.lib;dxfrw.lib;jwwlib.lib;muparser.lib;$(QTDIR)\lib\QtHelpd4.lib;$(QTDIR)\lib\QtSvgd4.lib;$(QTDIR)\lib\QtSqld4.lib;$(QTDIR)\lib\QtGuid4.lib;$(QTDIR)\lib\QtCored4.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(QTDIR)\lib;muparser_v2_2_2/lib;../../generated/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(QTDIR)\lib\qtmaind.lib;dxflib.lib;dxfrw.lib;jwwlib.lib;muparser32.lib;$(QTDIR)\lib\QtHelpd4.lib;$(QTDIR)\lib\QtSvgd4.lib;$(QTDIR)\lib\QtSqld4.lib;$(QTDIR)\lib\QtGuid4.lib;$(QTDIR)\lib\QtCored4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\muparser\muparser_v2_2_2\lib;../../generated/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -196,7 +197,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtSvg;$(QTDIR)\include;$(QTDIR)\include\QtHelp;.\muparser_v2_2_2\include;.\..\..\libraries\dxflib\src;.\..\..\libraries\libdxfrw\src;.\..\..\libraries\jwwlib\src;.\cmd;.\lib\actions;.\lib\creation;.\lib\debug;.\lib\engine;.\lib\fileio;.\lib\filters;.\lib\gui;.\lib\information;.\lib\math;.\lib\modification;.\lib\scripting;.\actions;.\main;.\plugins;.\ui;.\ui\forms;.\..\res;$(QTDIR)\include\ActiveQt;.\..\..\generated\librecad\moc;.\..\..\generated\librecad\ui;$(QTDIR)\mkspecs\default;.\GeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtSvg;$(QTDIR)\include;$(QTDIR)\include\QtHelp;C:\boost\boost_1_48_0;C:\muparser\muparser_v2_2_2\include;.\..\..\libraries\dxflib\src;.\..\..\libraries\libdxfrw\src;.\..\..\libraries\jwwlib\src;.\cmd;.\lib\actions;.\lib\creation;.\lib\debug;.\lib\engine;.\lib\fileio;.\lib\filters;.\lib\gui;.\lib\information;.\lib\math;.\lib\modification;.\lib\scripting;.\actions;.\main;.\plugins;.\ui;.\ui\forms;.\..\res;$(QTDIR)\include\ActiveQt;.\..\..\generated\librecad\moc;.\..\..\generated\librecad\ui;$(QTDIR)\mkspecs\default;.\GeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zm200 -std=c++0x -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>..\..\generated\librecad\obj\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -213,10 +214,11 @@
       <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
       <UndefinePreprocessorDefinitions>__STRICT_ANSI__;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>$(QTDIR)\lib\qtmain.lib;dxflib.lib;dxfrw.lib;jwwlib.lib;muparser.lib;$(QTDIR)\lib\QtHelp4.lib;$(QTDIR)\lib\QtSvg4.lib;$(QTDIR)\lib\QtSql4.lib;$(QTDIR)\lib\QtGui4.lib;$(QTDIR)\lib\QtCore4.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(QTDIR)\lib;muparser_v2_2_2/lib;../../generated/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(QTDIR)\lib\qtmain.lib;dxflib.lib;dxfrw.lib;jwwlib.lib;muparser32.lib;$(QTDIR)\lib\QtHelp4.lib;$(QTDIR)\lib\QtSvg4.lib;$(QTDIR)\lib\QtSql4.lib;$(QTDIR)\lib\QtGui4.lib;$(QTDIR)\lib\QtCore4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\muparser\muparser_v2_2_2\lib;../../generated/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -411,7 +413,9 @@
     <ClCompile Include="..\..\generated\librecad\moc\moc_rs_actiondrawcircle3p.cpp" />
     <ClCompile Include="..\..\generated\librecad\moc\moc_rs_actiondrawcirclecr.cpp" />
     <ClCompile Include="..\..\generated\librecad\moc\moc_rs_actiondrawcircleinscribe.cpp" />
+    <ClCompile Include="..\..\generated\librecad\moc\moc_rs_actiondrawcircletan1_2p.cpp" />
     <ClCompile Include="..\..\generated\librecad\moc\moc_rs_actiondrawcircletan2.cpp" />
+    <ClCompile Include="..\..\generated\librecad\moc\moc_rs_actiondrawcircletan2_1p.cpp" />
     <ClCompile Include="..\..\generated\librecad\moc\moc_rs_actiondrawcircletan3.cpp" />
     <ClCompile Include="..\..\generated\librecad\moc\moc_rs_actiondrawellipse4points.cpp" />
     <ClCompile Include="..\..\generated\librecad\moc\moc_rs_actiondrawellipseaxis.cpp" />
@@ -481,6 +485,7 @@
     <ClCompile Include="..\..\generated\librecad\moc\moc_rs_actionmodifytrim.cpp" />
     <ClCompile Include="..\..\generated\librecad\moc\moc_rs_actionmodifytrimamount.cpp" />
     <ClCompile Include="..\..\generated\librecad\moc\moc_rs_actionoptionsdrawing.cpp" />
+    <ClCompile Include="..\..\generated\librecad\moc\moc_rs_actionorder.cpp" />
     <ClCompile Include="..\..\generated\librecad\moc\moc_rs_actionparisdebugcreatecontainer.cpp" />
     <ClCompile Include="..\..\generated\librecad\moc\moc_rs_actionpolylineadd.cpp" />
     <ClCompile Include="..\..\generated\librecad\moc\moc_rs_actionpolylineappend.cpp" />
@@ -513,10 +518,15 @@
     <ClCompile Include="..\..\generated\librecad\moc\moc_rs_actionzoomscroll.cpp" />
     <ClCompile Include="..\..\generated\librecad\moc\moc_rs_actionzoomwindow.cpp" />
     <ClCompile Include="..\..\generated\librecad\moc\moc_rs_commands.cpp" />
+    <ClCompile Include="actions\rs_actiondrawcircletan1_2p.cpp" />
+    <ClCompile Include="actions\rs_actiondrawcircletan2_1p.cpp" />
+    <ClCompile Include="actions\rs_actionorder.cpp" />
     <ClCompile Include="GeneratedFiles\qrc_actions.cpp" />
     <ClCompile Include="GeneratedFiles\qrc_extui.cpp" />
     <ClCompile Include="GeneratedFiles\qrc_main.cpp" />
     <ClCompile Include="GeneratedFiles\qrc_ui.cpp" />
+    <ClCompile Include="lib\engine\lc_hyperbola.cpp" />
+    <ClCompile Include="lib\math\lc_quadratic.cpp" />
     <ClCompile Include="main\doc_plugin_interface.cpp" />
     <ClCompile Include="main\emu_c99.cpp" />
     <ClCompile Include="main\helpbrowser.cpp" />
@@ -825,6 +835,24 @@
     <ClCompile Include="lib\engine\rs_vector.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <CustomBuild Include="actions\rs_actiondrawcircletan1_2p.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\..\..\generated\librecad\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQC_APPKEY=\"/LibreCAD\" -DQC_APPNAME=\"LibreCAD\" -DQC_COMPANYNAME=\"LibreCAD\" -DQC_COMPANYKEY=\"LibreCAD\" -DQC_VERSION=\"master\" -DQC_DELAYED_SPLASH_SCREEN=1 -DHAS_BOOST=1 -DEMU_C99 -D_USE_MATH_DEFINES -DQC_APPDIR=\"LibreCAD\" -DQINITIMAGES_LIBRECAD=qInitImages_LibreCAD -DQT_DLL -DQT_SVG_LIB -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT "-I." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtHelp" "-I.\muparser_v2_2_2\include" "-I.\..\..\libraries\dxflib\src" "-I.\..\..\libraries\libdxfrw\src" "-I.\..\..\libraries\jwwlib\src" "-I.\cmd" "-I.\lib\actions" "-I.\lib\creation" "-I.\lib\debug" "-I.\lib\engine" "-I.\lib\fileio" "-I.\lib\filters" "-I.\lib\gui" "-I.\lib\information" "-I.\lib\math" "-I.\lib\modification" "-I.\lib\scripting" "-I.\actions" "-I.\main" "-I.\plugins" "-I.\ui" "-I.\ui\forms" "-I.\..\res" "-I$(QTDIR)\include\ActiveQt" "-I.\..\..\generated\librecad\moc" "-I.\..\..\generated\librecad\ui" "-I$(QTDIR)\mkspecs\default" "-I." "-I." "-I."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing rs_actiondrawcircletan1_2p.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\..\..\generated\librecad\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="actions\rs_actiondrawcircletan2_1p.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\..\..\generated\librecad\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQC_APPKEY=\"/LibreCAD\" -DQC_APPNAME=\"LibreCAD\" -DQC_COMPANYNAME=\"LibreCAD\" -DQC_COMPANYKEY=\"LibreCAD\" -DQC_VERSION=\"master\" -DQC_DELAYED_SPLASH_SCREEN=1 -DHAS_BOOST=1 -DEMU_C99 -D_USE_MATH_DEFINES -DQC_APPDIR=\"LibreCAD\" -DQINITIMAGES_LIBRECAD=qInitImages_LibreCAD -DQT_DLL -DQT_SVG_LIB -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT "-I." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtHelp" "-I.\muparser_v2_2_2\include" "-I.\..\..\libraries\dxflib\src" "-I.\..\..\libraries\libdxfrw\src" "-I.\..\..\libraries\jwwlib\src" "-I.\cmd" "-I.\lib\actions" "-I.\lib\creation" "-I.\lib\debug" "-I.\lib\engine" "-I.\lib\fileio" "-I.\lib\filters" "-I.\lib\gui" "-I.\lib\information" "-I.\lib\math" "-I.\lib\modification" "-I.\lib\scripting" "-I.\actions" "-I.\main" "-I.\plugins" "-I.\ui" "-I.\ui\forms" "-I.\..\res" "-I$(QTDIR)\include\ActiveQt" "-I.\..\..\generated\librecad\moc" "-I.\..\..\generated\librecad\ui" "-I$(QTDIR)\mkspecs\default" "-I." "-I." "-I."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing rs_actiondrawcircletan2_1p.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\..\..\generated\librecad\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="actions\rs_actionorder.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\..\..\generated\librecad\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQC_APPKEY=\"/LibreCAD\" -DQC_APPNAME=\"LibreCAD\" -DQC_COMPANYNAME=\"LibreCAD\" -DQC_COMPANYKEY=\"LibreCAD\" -DQC_VERSION=\"master\" -DQC_DELAYED_SPLASH_SCREEN=1 -DHAS_BOOST=1 -DEMU_C99 -D_USE_MATH_DEFINES -DQC_APPDIR=\"LibreCAD\" -DQINITIMAGES_LIBRECAD=qInitImages_LibreCAD -DQT_DLL -DQT_SVG_LIB -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT "-I." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtHelp" "-I.\muparser_v2_2_2\include" "-I.\..\..\libraries\dxflib\src" "-I.\..\..\libraries\libdxfrw\src" "-I.\..\..\libraries\jwwlib\src" "-I.\cmd" "-I.\lib\actions" "-I.\lib\creation" "-I.\lib\debug" "-I.\lib\engine" "-I.\lib\fileio" "-I.\lib\filters" "-I.\lib\gui" "-I.\lib\information" "-I.\lib\math" "-I.\lib\modification" "-I.\lib\scripting" "-I.\actions" "-I.\main" "-I.\plugins" "-I.\ui" "-I.\ui\forms" "-I.\..\res" "-I$(QTDIR)\include\ActiveQt" "-I.\..\..\generated\librecad\moc" "-I.\..\..\generated\librecad\ui" "-I$(QTDIR)\mkspecs\default" "-I." "-I." "-I."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing rs_actionorder.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\..\..\generated\librecad\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
     <ClInclude Include="GeneratedFiles\ui_qg_arcoptions.h" />
     <ClInclude Include="GeneratedFiles\ui_qg_arctangentialoptions.h" />
     <ClInclude Include="GeneratedFiles\ui_qg_beveloptions.h" />

@@ -1,4 +1,4 @@
-#ifndef	JWWDOC_H
+﻿#ifndef	JWWDOC_H
 #define	JWWDOC_H
 
 #include "jwtype.h"

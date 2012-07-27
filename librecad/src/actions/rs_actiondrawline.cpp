@@ -32,7 +32,7 @@
 #include "rs_graphicview.h"
 #include "rs_commands.h"
 #include "rs_commandevent.h"
-
+#include "emu_c99.h"
 
 
 RS_ActionDrawLine::RS_ActionDrawLine(RS_EntityContainer& container,

@@ -10,6 +10,7 @@
 
 //Table 949 one byte
 static const int DRW_Table949[] = {
+	0
 };
 
 //Table 949 lead byte

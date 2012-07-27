@@ -13,6 +13,7 @@
 //from 0xA1 -> 0xFF61
 //to   0xDF .> 0xFF9F
 static const int DRW_Table932[] = {
+	0
 };
 
 //Table 932 lead byte

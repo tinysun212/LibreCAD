@@ -10,6 +10,7 @@
 
 //Table 950 one byte
 static const int DRW_Table950[] = {
+	0
 };
 
 //Table 950 lead byte

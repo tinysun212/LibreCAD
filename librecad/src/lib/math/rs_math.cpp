@@ -698,7 +698,7 @@ bool RS_Math::linearSolver(const QVector<QVector<double> >& mt, QVector<double>&
     }
     sn.resize(mSize);//to hold the solution
     //#ifdef	HAS_BOOST
-#if false
+#if 0
     boost::numeric::ublas::matrix<double> bm (mSize, mSize);
     boost::numeric::ublas::vector<double> bs(mSize);
 

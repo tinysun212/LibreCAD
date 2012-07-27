@@ -42,8 +42,8 @@ class RS_FileIO {
 private:
     //singleton
     RS_FileIO();
-    RS_FileIO(RS_FileIO&) = delete;
-    RS_FileIO& operator = (RS_FileIO&) = delete;
+    RS_FileIO(const RS_FileIO&);  // = delete;
+    RS_FileIO& operator = (const RS_FileIO&);  // = delete;
 	
 public:
     /**

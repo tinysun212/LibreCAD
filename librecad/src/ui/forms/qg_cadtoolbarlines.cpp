@@ -289,7 +289,7 @@ void QG_CadToolBarLines::showCadToolBar(RS2::ActionType actionType) {
     case RS2::ActionDrawLineFree:
         bFree->setChecked(true);
         return;
-    case RS2::RS2::ActionDrawLineVertical:
+    case RS2::ActionDrawLineVertical:
         bVertical->setChecked(true);
         return;
     case RS2::ActionDrawLineHorizontal:

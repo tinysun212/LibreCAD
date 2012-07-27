@@ -33,7 +33,7 @@ class RS_ActionBlocksSave : public RS_ActionInterface {
 public:
     RS_ActionBlocksSave(RS_EntityContainer& container,
                         RS_GraphicView& graphicView);
-    ~RS_ActionBlocksSave() = default;
+    // ~RS_ActionBlocksSave() = default;
 
 	static QAction* createGUIAction(RS2::ActionType /*type*/, QObject* /*parent*/);
 

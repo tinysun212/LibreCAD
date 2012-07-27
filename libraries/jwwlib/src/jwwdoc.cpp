@@ -1,4 +1,4 @@
-#include "jwwdoc.h"
+﻿#include "jwwdoc.h"
 
 #define	LINEBUF_SIZE	1024
 

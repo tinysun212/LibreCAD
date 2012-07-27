@@ -74,8 +74,8 @@ protected:
 
 private:
     RS_Commands() ;
-    RS_Commands(RS_Commands& ) = delete;
-    RS_Commands& operator = ( RS_Commands& ) = delete;
+    RS_Commands(const RS_Commands& );  // = delete;
+    RS_Commands& operator = (const RS_Commands& );  // = delete;
 
     QMultiHash<QString, RS2::ActionType> mainCommands;
     QMultiHash<QString, RS2::ActionType> shortCommands;

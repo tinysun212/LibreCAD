@@ -228,6 +228,7 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\dl_dxf.cpp" />
     <ClCompile Include="src\dl_jww.cpp" />
     <ClCompile Include="src\jwwdoc.cpp" />
   </ItemGroup>
@@ -235,6 +236,8 @@
     <ClInclude Include="..\jwwlib\src\dl_jww.h" />
     <ClInclude Include="..\jwwlib\src\jwtype.h" />
     <ClInclude Include="..\jwwlib\src\jwwdoc.h" />
+    <ClInclude Include="src\dl_creationadapter.h" />
+    <ClInclude Include="src\dl_dxf.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
