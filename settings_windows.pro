@@ -6,7 +6,7 @@ BOOST_LIBDIR = /boost/boost_1_49_0
     BOOST_DIR = /boost/boost_1_48_0
     BOOST_LIBDIR = /boost/boost_1_48_0
 } 
-BOOST_LIBS = "$${BOOST_DIR}/libs"
+BOOST_LIBS = 
 
 MUPARSER_DIR=muparser_v2_2_2
 
